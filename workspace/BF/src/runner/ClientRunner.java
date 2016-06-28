@@ -6,7 +6,6 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 import rmi.RemoteHelper;
-import service.IOService;
 import ui.MainFrame;
 /**客户端的启动项
 BY 朱应山*/
@@ -16,10 +15,11 @@ public class ClientRunner {
 	private RemoteHelper remoteHelper;
 	
 	/**构造方法，包括连接服务器和启动用户图形界面*/
-	public ClientRunner() {
+	public ClientRunner() { 
 		linkToServer();
 		initGUI();
 	}
+	
 	/**连接服务器*/
 	private void linkToServer() {
 		try {
@@ -34,11 +34,14 @@ public class ClientRunner {
 			e.printStackTrace();
 		}
 	}
+	
 	/**启动界面*/
 	private void initGUI() {
 		MainFrame mainFrame = new MainFrame();
 		
 	}
+	
+	
 	
 	public void test(){
 		try {
@@ -49,8 +52,12 @@ public class ClientRunner {
 		}
 	}
 	
+	
+	
+	
 	public static void main(String[] args){
 		ClientRunner cr = new ClientRunner();
 		//cr.test();
 	}
+	
 }

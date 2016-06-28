@@ -8,7 +8,12 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public boolean login(String username, String password) throws RemoteException {
-		return true;
+		if (username.equals("zys")&&password.equals("000000")) {
+			return true;
+		}else {
+			return false;
+		}
+		
 	}
 
 	@Override

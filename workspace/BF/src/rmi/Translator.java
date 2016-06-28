@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Translator {
 
-	private static void translate(String bfString) throws IOException {
+	public static void translate(String bfString) throws IOException {
 		int strLength=bfString.length();
 		char[] objects=new char[strLength];//对象
 		char[] bfChars=bfString.toCharArray();//原字符
